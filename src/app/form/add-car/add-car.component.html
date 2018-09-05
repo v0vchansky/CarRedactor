@@ -1,0 +1,15 @@
+<a [routerLink]="['/']" class="btn btn-info">Назад</a>
+<br>
+  <input type="text" class="form-control" [(ngModel)]="carName">
+  <br>
+  <input type="text" class="form-control" [(ngModel)]="carModel">
+  <br>
+  <input type="text" class="form-control" [(ngModel)]="carPrice">
+  <br>
+  <button class="btn btn-primary" (click)="addOwners()">Добавить владельца</button>
+  <br>
+  <app-add-owner *ngFor="let owner of carOwners; let ownerId = index" [isDisabled]="isDisabled" [owner]="owner" [ownerId]="ownerId" (onDeleteOwner)="updateOwnersListDelete($event)"></app-add-owner>
+  <br>
+  <button [routerLink]="['/show-car/', newCarId]" type="submit" class="btn btn-primary" (click)="addCars()">Добавить машину</button>
+  <p>{{ inputValidate }}</p>
+

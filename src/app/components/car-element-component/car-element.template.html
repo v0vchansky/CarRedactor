@@ -1,0 +1,8 @@
+<li class="list-group-item disabled custom-li-position">
+    <div>
+        <span style="margin-right: 10px">{{ carItem.id }}</span>
+        <a [routerLink]="['show-car', carItem.id]">{{ carItem.carName }} {{ carItem.carModel }}</a>
+    </div>
+    <a [routerLink]="['edit-car', carItem.id]" class="btn btn-info">Редактировать</a>
+    <button class="btn btn-warning" (click)="deleteCar(carItem.id)">Удалить</button>
+</li>

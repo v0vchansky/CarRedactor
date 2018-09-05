@@ -1,0 +1,10 @@
+<a [routerLink]="['/']" class="btn btn-info">Назад</a>
+<h2>Марка автомобиля: {{ car.carName }}</h2>
+<h3>Модель: {{ car.carModel }}</h3>
+<span>Цена: {{ car.carPrice }}</span>
+<br>
+<h4>Владельцы:</h4>
+<br>
+<ul class="list-group list-group-flush">
+    <li style="padding-left: 0" *ngFor="let owner of car.carOwners" class="list-group-item">{{ owner.firstName }} {{ owner.secondName }}</li>
+</ul>

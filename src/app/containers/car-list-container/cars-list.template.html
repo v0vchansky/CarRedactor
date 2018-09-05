@@ -1,0 +1,4 @@
+<a [routerLink]="['add-car']" class="btn btn-primary">Добавить машину</a>
+<ul class="list-group">
+    <car-element *ngFor="let car of (carState | async).cars;" [carItem]="car" (onDeleteCar)="updateCarsListDelete($event)"></car-element>
+</ul>
