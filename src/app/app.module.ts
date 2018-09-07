@@ -12,28 +12,24 @@ import { CarsReducer } from './redux/cars.reducer';
 
 // components
 import { AppComponent } from './app.component';
-import { EditOwnerComponent } from './edit-form/edit-car/edit-owner/edit-owner.component';
 import { CarsListComponent } from './containers/car-list-container/cars-list.component';
-import { EditFormComponent } from './edit-form/edit-form.component';
-import { EditCarComponent } from './edit-form/edit-car/edit-car.component';
-import { FormComponent } from './form/form.component';
-import { AddCarComponent } from './form/add-car/add-car.component';
-import { AddOwnerComponent } from './form/add-car/add-owner/add-owner.component';
+import { AddCarComponent } from './containers/add-car-container/add-car.component';
 import { CarElementComponent } from './components/car-element-component/car-element.component';
 import { CarPageComponent } from './components/car-page-component/car-page.component';
+import {CarFormComponent} from './components/car-form-component/car-form.component';
+import {CarOwnerComponent} from './components/car-owner-component/car-owner.component';
+import {EditCarComponent} from './containers/edit-car-container/edit-car.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarElementComponent,
-    EditOwnerComponent,
-    EditFormComponent,
     EditCarComponent,
     CarsListComponent,
-    FormComponent,
     AddCarComponent,
-    AddOwnerComponent,
+    CarOwnerComponent,
     CarPageComponent,
+    CarFormComponent,
   ],
   imports: [
     BrowserModule,

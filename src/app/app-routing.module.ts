@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // components
-import { FormComponent } from './form/form.component';
 import { CarsListComponent } from './containers/car-list-container/cars-list.component';
-import { EditFormComponent } from './edit-form/edit-form.component';
 import { CarPageComponent } from './components/car-page-component/car-page.component';
+import {AddCarComponent} from './containers/add-car-container/add-car.component';
+import {EditCarComponent} from './containers/edit-car-container/edit-car.component';
 
 const appRoutes: Routes = [
   {
@@ -15,11 +15,11 @@ const appRoutes: Routes = [
   },
   {
     path: 'edit-car/:id',
-    component: EditFormComponent,
+    component: EditCarComponent,
   },
   {
     path: 'add-car',
-    component: FormComponent,
+    component: AddCarComponent,
   },
   {
     path: '',

@@ -1,6 +1,6 @@
-<input type="text" class="form-control" [(ngModel)]="carName">
+<input placeholder="Car name" type="text" class="form-control" (input)="onTab()" [(ngModel)]="carName">
 <br>
-<input type="text" class="form-control" [(ngModel)]="carModel">
+<input type="text" placeholder="Car model" class="form-control" (input)="onTab()" [(ngModel)]="carModel">
 <br>
-<input type="text" class="form-control" [(ngModel)]="carPrice">
+<input type="text" placeholder="Car price" class="form-control" (input)="onTab()" [(ngModel)]="carPrice">
 <br>

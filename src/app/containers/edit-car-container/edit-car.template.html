@@ -1,0 +1,25 @@
+<a [routerLink]="['/']" class="btn btn-info">Назад</a>
+<br>
+<car-form
+        (onEmmit)="getCarInfo($event)"
+        [carName]="carName"
+        [carModel]="carModel"
+        [carPrice]="carPrice"
+></car-form>
+<button class="btn btn-primary" (click)="addOwners()">Добавить владельца</button>
+<br>
+<car-owner
+        *ngFor="let owner of carOwners; let ownerId = index"
+        [isDisabled]="isDisabled"
+        [owner]="owner"
+        [ownerId]="ownerId"
+        (onDeleteOwner)="updateOwnersListDelete($event)"
+></car-owner>
+<br>
+<button
+        [routerLink]="['/show-car/', id]"
+        (click)="updateCarsList()"
+        type="submit"
+        class="btn btn-primary"
+>Сохранить</button>
+<p>{{ inputValidate }}</p>

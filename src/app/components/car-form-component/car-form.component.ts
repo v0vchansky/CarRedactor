@@ -2,7 +2,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 // models
-import { Car } from '../../models/car.model';
+import { CarInfo } from '../../models/carInfo.model';
 
 @Component({
     selector: 'car-form',
@@ -16,11 +16,15 @@ export class CarFormComponent {
     @Input() carModel: string;
     @Input() carPrice: number;
 
-    @Output() onEmmit = new EventEmitter<{}>();
+    @Output() onEmmit = new EventEmitter<CarInfo>();
 
     constructor() {}
 
-    onSave() {
-
+    onTab() {
+        this.onEmmit.emit({
+            carName: this.carName,
+            carModel: this.carModel,
+            carPrice: this.carPrice
+        })
     }
 }

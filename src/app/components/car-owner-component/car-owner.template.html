@@ -1,13 +1,12 @@
-
- {{ ownerId }}
-  <div class="row">
+{{ ownerId }}
+<div class="row">
     <div class="col-md-4">
-      <input type="text" class="form-control"  required [(ngModel)]="owner.firstName">
+        <input type="text" class="form-control"  required [(ngModel)]="owner.firstName">
     </div>
 
     <div class="col-md-4">
-      <input type="text" class="form-control"  required [(ngModel)]="owner.secondName">
+        <input type="text" class="form-control"  required [(ngModel)]="owner.secondName">
     </div>
     <button [disabled]="isDisabled" class="btn btn-danger" (click)="deleteOwner(owner)">Удалить владельца</button>
     <!--<button *ngIf="!isDisabled" class="btn btn-danger" (click)="deleteOwner(ownerId)">Удалить владельца</button>-->
-  </div>
+</div>
